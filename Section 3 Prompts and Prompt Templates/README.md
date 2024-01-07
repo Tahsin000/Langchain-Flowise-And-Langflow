@@ -24,6 +24,13 @@ FlowGPT is a platform that allows users to create AI prompts that can generate t
 
 ## 8. Multi-Input Prompt Templates
 
+![Alt text](image-8.png)
+![Alt text](image-9.png)
+![Alt text](image-10.png)
+
+
+
+
 ## 9. Chat Prompt Template
 
 ## 10. Few Shot Prompt Templates
