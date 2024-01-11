@@ -15,7 +15,6 @@
 ![Alt text](image-3.png)
 ![Alt text](image-4.png)
 
-
 ## 14. Sequential Chain
 
 ![Alt text](image-5.png)
@@ -24,4 +23,8 @@
 
 ## 15. Router Chain
 
+![Alt text](image-8.png)
+
 ## 16. Retrieval Chain
+
+![Alt text](image-7.png)
