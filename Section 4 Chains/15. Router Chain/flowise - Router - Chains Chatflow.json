@@ -1,0 +1,510 @@
+{
+  "nodes": [
+    {
+      "width": 300,
+      "height": 576,
+      "id": "chatOpenAI_0",
+      "position": {
+        "x": 575.0000000000001,
+        "y": 258.4117647058824
+      },
+      "type": "customNode",
+      "data": {
+        "id": "chatOpenAI_0",
+        "label": "ChatOpenAI",
+        "version": 2,
+        "name": "chatOpenAI",
+        "type": "ChatOpenAI",
+        "baseClasses": [
+          "ChatOpenAI",
+          "BaseChatModel",
+          "BaseLanguageModel",
+          "Runnable"
+        ],
+        "category": "Chat Models",
+        "description": "Wrapper around OpenAI large language models that use the Chat endpoint",
+        "inputParams": [
+          {
+            "label": "Connect Credential",
+            "name": "credential",
+            "type": "credential",
+            "credentialNames": [
+              "openAIApi"
+            ],
+            "id": "chatOpenAI_0-input-credential-credential"
+          },
+          {
+            "label": "Model Name",
+            "name": "modelName",
+            "type": "options",
+            "options": [
+              {
+                "label": "gpt-4",
+                "name": "gpt-4"
+              },
+              {
+                "label": "gpt-4-1106-preview",
+                "name": "gpt-4-1106-preview"
+              },
+              {
+                "label": "gpt-4-vision-preview",
+                "name": "gpt-4-vision-preview"
+              },
+              {
+                "label": "gpt-4-0613",
+                "name": "gpt-4-0613"
+              },
+              {
+                "label": "gpt-4-32k",
+                "name": "gpt-4-32k"
+              },
+              {
+                "label": "gpt-4-32k-0613",
+                "name": "gpt-4-32k-0613"
+              },
+              {
+                "label": "gpt-3.5-turbo",
+                "name": "gpt-3.5-turbo"
+              },
+              {
+                "label": "gpt-3.5-turbo-1106",
+                "name": "gpt-3.5-turbo-1106"
+              },
+              {
+                "label": "gpt-3.5-turbo-0613",
+                "name": "gpt-3.5-turbo-0613"
+              },
+              {
+                "label": "gpt-3.5-turbo-16k",
+                "name": "gpt-3.5-turbo-16k"
+              },
+              {
+                "label": "gpt-3.5-turbo-16k-0613",
+                "name": "gpt-3.5-turbo-16k-0613"
+              }
+            ],
+            "default": "gpt-3.5-turbo",
+            "optional": true,
+            "id": "chatOpenAI_0-input-modelName-options"
+          },
+          {
+            "label": "Temperature",
+            "name": "temperature",
+            "type": "number",
+            "step": 0.1,
+            "default": 0.9,
+            "optional": true,
+            "id": "chatOpenAI_0-input-temperature-number"
+          },
+          {
+            "label": "Max Tokens",
+            "name": "maxTokens",
+            "type": "number",
+            "step": 1,
+            "optional": true,
+            "additionalParams": true,
+            "id": "chatOpenAI_0-input-maxTokens-number"
+          },
+          {
+            "label": "Top Probability",
+            "name": "topP",
+            "type": "number",
+            "step": 0.1,
+            "optional": true,
+            "additionalParams": true,
+            "id": "chatOpenAI_0-input-topP-number"
+          },
+          {
+            "label": "Frequency Penalty",
+            "name": "frequencyPenalty",
+            "type": "number",
+            "step": 0.1,
+            "optional": true,
+            "additionalParams": true,
+            "id": "chatOpenAI_0-input-frequencyPenalty-number"
+          },
+          {
+            "label": "Presence Penalty",
+            "name": "presencePenalty",
+            "type": "number",
+            "step": 0.1,
+            "optional": true,
+            "additionalParams": true,
+            "id": "chatOpenAI_0-input-presencePenalty-number"
+          },
+          {
+            "label": "Timeout",
+            "name": "timeout",
+            "type": "number",
+            "step": 1,
+            "optional": true,
+            "additionalParams": true,
+            "id": "chatOpenAI_0-input-timeout-number"
+          },
+          {
+            "label": "BasePath",
+            "name": "basepath",
+            "type": "string",
+            "optional": true,
+            "additionalParams": true,
+            "id": "chatOpenAI_0-input-basepath-string"
+          },
+          {
+            "label": "BaseOptions",
+            "name": "baseOptions",
+            "type": "json",
+            "optional": true,
+            "additionalParams": true,
+            "id": "chatOpenAI_0-input-baseOptions-json"
+          }
+        ],
+        "inputAnchors": [
+          {
+            "label": "Cache",
+            "name": "cache",
+            "type": "BaseCache",
+            "optional": true,
+            "id": "chatOpenAI_0-input-cache-BaseCache"
+          }
+        ],
+        "inputs": {
+          "cache": "",
+          "modelName": "gpt-3.5-turbo",
+          "temperature": 0.9,
+          "maxTokens": "",
+          "topP": "",
+          "frequencyPenalty": "",
+          "presencePenalty": "",
+          "timeout": "",
+          "basepath": "",
+          "baseOptions": ""
+        },
+        "outputAnchors": [
+          {
+            "id": "chatOpenAI_0-output-chatOpenAI-ChatOpenAI|BaseChatModel|BaseLanguageModel|Runnable",
+            "name": "chatOpenAI",
+            "label": "ChatOpenAI",
+            "type": "ChatOpenAI | BaseChatModel | BaseLanguageModel | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 575.0000000000001,
+        "y": 258.4117647058824
+      },
+      "dragging": false
+    },
+    {
+      "width": 300,
+      "height": 281,
+      "id": "multiPromptChain_0",
+      "position": {
+        "x": 1021.0941176470592,
+        "y": 689.2823529411764
+      },
+      "type": "customNode",
+      "data": {
+        "id": "multiPromptChain_0",
+        "label": "Multi Prompt Chain",
+        "version": 1,
+        "name": "multiPromptChain",
+        "type": "MultiPromptChain",
+        "baseClasses": [
+          "MultiPromptChain",
+          "MultiRouteChain",
+          "BaseChain",
+          "Runnable"
+        ],
+        "category": "Chains",
+        "description": "Chain automatically picks an appropriate prompt from multiple prompt templates",
+        "inputParams": [],
+        "inputAnchors": [
+          {
+            "label": "Language Model",
+            "name": "model",
+            "type": "BaseLanguageModel",
+            "id": "multiPromptChain_0-input-model-BaseLanguageModel"
+          },
+          {
+            "label": "Prompt Retriever",
+            "name": "promptRetriever",
+            "type": "PromptRetriever",
+            "list": true,
+            "id": "multiPromptChain_0-input-promptRetriever-PromptRetriever"
+          }
+        ],
+        "inputs": {
+          "model": "{{chatOpenAI_0.data.instance}}",
+          "promptRetriever": [
+            "{{promptRetriever_1.data.instance}}",
+            "{{promptRetriever_2.data.instance}}",
+            "{{promptRetriever_3.data.instance}}"
+          ]
+        },
+        "outputAnchors": [
+          {
+            "id": "multiPromptChain_0-output-multiPromptChain-MultiPromptChain|MultiRouteChain|BaseChain|Runnable",
+            "name": "multiPromptChain",
+            "label": "MultiPromptChain",
+            "type": "MultiPromptChain | MultiRouteChain | BaseChain | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1021.0941176470592,
+        "y": 689.2823529411764
+      },
+      "dragging": false
+    },
+    {
+      "width": 300,
+      "height": 633,
+      "id": "promptRetriever_1",
+      "position": {
+        "x": 101.77461038734444,
+        "y": 233.50658065049805
+      },
+      "type": "customNode",
+      "data": {
+        "id": "promptRetriever_1",
+        "label": "Prompt Retriever",
+        "version": 1,
+        "name": "promptRetriever",
+        "type": "PromptRetriever",
+        "baseClasses": [
+          "PromptRetriever"
+        ],
+        "category": "Retrievers",
+        "description": "Store prompt template with name & description to be later queried by MultiPromptChain",
+        "inputParams": [
+          {
+            "label": "Prompt Name",
+            "name": "name",
+            "type": "string",
+            "placeholder": "physics-qa",
+            "id": "promptRetriever_1-input-name-string"
+          },
+          {
+            "label": "Prompt Description",
+            "name": "description",
+            "type": "string",
+            "rows": 3,
+            "description": "Description of what the prompt does and when it should be used",
+            "placeholder": "Good for answering questions about physics",
+            "id": "promptRetriever_1-input-description-string"
+          },
+          {
+            "label": "Prompt System Message",
+            "name": "systemMessage",
+            "type": "string",
+            "rows": 4,
+            "placeholder": "You are a very smart physics professor. You are great at answering questions about physics in a concise and easy to understand manner. When you don't know the answer to a question you admit that you don't know.",
+            "id": "promptRetriever_1-input-systemMessage-string"
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "name": "history",
+          "description": "Good for answering questions about history",
+          "systemMessage": "You are a very smart history professor. You are great at answering questions about history in a concise and easy to understand manner. Wher you don't know the answer to a question you admit that you don't know.\nStart with saying As a \"history professor\""
+        },
+        "outputAnchors": [
+          {
+            "id": "promptRetriever_1-output-promptRetriever-PromptRetriever",
+            "name": "promptRetriever",
+            "label": "PromptRetriever",
+            "type": "PromptRetriever"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 101.77461038734444,
+        "y": 233.50658065049805
+      },
+      "dragging": false
+    },
+    {
+      "width": 300,
+      "height": 633,
+      "id": "promptRetriever_2",
+      "position": {
+        "x": -325.1579233713303,
+        "y": 433.494836754979
+      },
+      "type": "customNode",
+      "data": {
+        "id": "promptRetriever_2",
+        "label": "Prompt Retriever",
+        "version": 1,
+        "name": "promptRetriever",
+        "type": "PromptRetriever",
+        "baseClasses": [
+          "PromptRetriever"
+        ],
+        "category": "Retrievers",
+        "description": "Store prompt template with name & description to be later queried by MultiPromptChain",
+        "inputParams": [
+          {
+            "label": "Prompt Name",
+            "name": "name",
+            "type": "string",
+            "placeholder": "physics-qa",
+            "id": "promptRetriever_2-input-name-string"
+          },
+          {
+            "label": "Prompt Description",
+            "name": "description",
+            "type": "string",
+            "rows": 3,
+            "description": "Description of what the prompt does and when it should be used",
+            "placeholder": "Good for answering questions about physics",
+            "id": "promptRetriever_2-input-description-string"
+          },
+          {
+            "label": "Prompt System Message",
+            "name": "systemMessage",
+            "type": "string",
+            "rows": 4,
+            "placeholder": "You are a very smart physics professor. You are great at answering questions about physics in a concise and easy to understand manner. When you don't know the answer to a question you admit that you don't know.",
+            "id": "promptRetriever_2-input-systemMessage-string"
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "name": "math",
+          "description": "Good for answering math questions",
+          "systemMessage": "You are a very smart Math professor. You are great at answering questions about math in a concise and easy to understand manner. Wher you don't know the answer to a question you admit that you don't know.\nStart with saying As a \"math professor\""
+        },
+        "outputAnchors": [
+          {
+            "id": "promptRetriever_2-output-promptRetriever-PromptRetriever",
+            "name": "promptRetriever",
+            "label": "PromptRetriever",
+            "type": "PromptRetriever"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -325.1579233713303,
+        "y": 433.494836754979
+      },
+      "dragging": false
+    },
+    {
+      "width": 300,
+      "height": 633,
+      "id": "promptRetriever_3",
+      "position": {
+        "x": -742.2880958646837,
+        "y": 763.6215651590569
+      },
+      "type": "customNode",
+      "data": {
+        "id": "promptRetriever_3",
+        "label": "Prompt Retriever",
+        "version": 1,
+        "name": "promptRetriever",
+        "type": "PromptRetriever",
+        "baseClasses": [
+          "PromptRetriever"
+        ],
+        "category": "Retrievers",
+        "description": "Store prompt template with name & description to be later queried by MultiPromptChain",
+        "inputParams": [
+          {
+            "label": "Prompt Name",
+            "name": "name",
+            "type": "string",
+            "placeholder": "physics-qa",
+            "id": "promptRetriever_3-input-name-string"
+          },
+          {
+            "label": "Prompt Description",
+            "name": "description",
+            "type": "string",
+            "rows": 3,
+            "description": "Description of what the prompt does and when it should be used",
+            "placeholder": "Good for answering questions about physics",
+            "id": "promptRetriever_3-input-description-string"
+          },
+          {
+            "label": "Prompt System Message",
+            "name": "systemMessage",
+            "type": "string",
+            "rows": 4,
+            "placeholder": "You are a very smart physics professor. You are great at answering questions about physics in a concise and easy to understand manner. When you don't know the answer to a question you admit that you don't know.",
+            "id": "promptRetriever_3-input-systemMessage-string"
+          }
+        ],
+        "inputAnchors": [],
+        "inputs": {
+          "name": "physics",
+          "description": "Good for answering questions about physics",
+          "systemMessage": "You are a very smart physics professor. You are great at answering questions about physics in a concise and easy to understand manner. Wher you don't know the answer to a question you admit that you don't know.\nStart with saying As a \"physics professor\""
+        },
+        "outputAnchors": [
+          {
+            "id": "promptRetriever_3-output-promptRetriever-PromptRetriever",
+            "name": "promptRetriever",
+            "label": "PromptRetriever",
+            "type": "PromptRetriever"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": -742.2880958646837,
+        "y": 763.6215651590569
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "chatOpenAI_0",
+      "sourceHandle": "chatOpenAI_0-output-chatOpenAI-ChatOpenAI|BaseChatModel|BaseLanguageModel|Runnable",
+      "target": "multiPromptChain_0",
+      "targetHandle": "multiPromptChain_0-input-model-BaseLanguageModel",
+      "type": "buttonedge",
+      "id": "chatOpenAI_0-chatOpenAI_0-output-chatOpenAI-ChatOpenAI|BaseChatModel|BaseLanguageModel|Runnable-multiPromptChain_0-multiPromptChain_0-input-model-BaseLanguageModel"
+    },
+    {
+      "source": "promptRetriever_1",
+      "sourceHandle": "promptRetriever_1-output-promptRetriever-PromptRetriever",
+      "target": "multiPromptChain_0",
+      "targetHandle": "multiPromptChain_0-input-promptRetriever-PromptRetriever",
+      "type": "buttonedge",
+      "id": "promptRetriever_1-promptRetriever_1-output-promptRetriever-PromptRetriever-multiPromptChain_0-multiPromptChain_0-input-promptRetriever-PromptRetriever"
+    },
+    {
+      "source": "promptRetriever_2",
+      "sourceHandle": "promptRetriever_2-output-promptRetriever-PromptRetriever",
+      "target": "multiPromptChain_0",
+      "targetHandle": "multiPromptChain_0-input-promptRetriever-PromptRetriever",
+      "type": "buttonedge",
+      "id": "promptRetriever_2-promptRetriever_2-output-promptRetriever-PromptRetriever-multiPromptChain_0-multiPromptChain_0-input-promptRetriever-PromptRetriever"
+    },
+    {
+      "source": "promptRetriever_3",
+      "sourceHandle": "promptRetriever_3-output-promptRetriever-PromptRetriever",
+      "target": "multiPromptChain_0",
+      "targetHandle": "multiPromptChain_0-input-promptRetriever-PromptRetriever",
+      "type": "buttonedge",
+      "id": "promptRetriever_3-promptRetriever_3-output-promptRetriever-PromptRetriever-multiPromptChain_0-multiPromptChain_0-input-promptRetriever-PromptRetriever"
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "nodes": [
+    {
+      "width": 300,
+      "height": 576,
+      "id": "chatOpenAI_0",
+      "position": {
+        "x": 589,
+        "y": 319
+      },
+      "type": "customNode",
+      "data": {
+        "id": "chatOpenAI_0",
+        "label": "ChatOpenAI",
+        "version": 2,
+        "name": "chatOpenAI",
+        "type": "ChatOpenAI",
+        "baseClasses": [
+          "ChatOpenAI",
+          "BaseChatModel",
+          "BaseLanguageModel",
+          "Runnable"
+        ],
+        "category": "Chat Models",
+        "description": "Wrapper around OpenAI large language models that use the Chat endpoint",
+        "inputParams": [
+          {
+            "label": "Connect Credential",
+            "name": "credential",
+            "type": "credential",
+            "credentialNames": [
+              "openAIApi"
+            ],
+            "id": "chatOpenAI_0-input-credential-credential"
+          },
+          {
+            "label": "Model Name",
+            "name": "modelName",
+            "type": "options",
+            "options": [
+              {
+                "label": "gpt-4",
+                "name": "gpt-4"
+              },
+              {
+                "label": "gpt-4-1106-preview",
+                "name": "gpt-4-1106-preview"
+              },
+              {
+                "label": "gpt-4-vision-preview",
+                "name": "gpt-4-vision-preview"
+              },
+              {
+                "label": "gpt-4-0613",
+                "name": "gpt-4-0613"
+              },
+              {
+                "label": "gpt-4-32k",
+                "name": "gpt-4-32k"
+              },
+              {
+                "label": "gpt-4-32k-0613",
+                "name": "gpt-4-32k-0613"
+              },
+              {
+                "label": "gpt-3.5-turbo",
+                "name": "gpt-3.5-turbo"
+              },
+              {
+                "label": "gpt-3.5-turbo-1106",
+                "name": "gpt-3.5-turbo-1106"
+              },
+              {
+                "label": "gpt-3.5-turbo-0613",
+                "name": "gpt-3.5-turbo-0613"
+              },
+              {
+                "label": "gpt-3.5-turbo-16k",
+                "name": "gpt-3.5-turbo-16k"
+              },
+              {
+                "label": "gpt-3.5-turbo-16k-0613",
+                "name": "gpt-3.5-turbo-16k-0613"
+              }
+            ],
+            "default": "gpt-3.5-turbo",
+            "optional": true,
+            "id": "chatOpenAI_0-input-modelName-options"
+          },
+          {
+            "label": "Temperature",
+            "name": "temperature",
+            "type": "number",
+            "step": 0.1,
+            "default": 0.9,
+            "optional": true,
+            "id": "chatOpenAI_0-input-temperature-number"
+          },
+          {
+            "label": "Max Tokens",
+            "name": "maxTokens",
+            "type": "number",
+            "step": 1,
+            "optional": true,
+            "additionalParams": true,
+            "id": "chatOpenAI_0-input-maxTokens-number"
+          },
+          {
+            "label": "Top Probability",
+            "name": "topP",
+            "type": "number",
+            "step": 0.1,
+            "optional": true,
+            "additionalParams": true,
+            "id": "chatOpenAI_0-input-topP-number"
+          },
+          {
+            "label": "Frequency Penalty",
+            "name": "frequencyPenalty",
+            "type": "number",
+            "step": 0.1,
+            "optional": true,
+            "additionalParams": true,
+            "id": "chatOpenAI_0-input-frequencyPenalty-number"
+          },
+          {
+            "label": "Presence Penalty",
+            "name": "presencePenalty",
+            "type": "number",
+            "step": 0.1,
+            "optional": true,
+            "additionalParams": true,
+            "id": "chatOpenAI_0-input-presencePenalty-number"
+          },
+          {
+            "label": "Timeout",
+            "name": "timeout",
+            "type": "number",
+            "step": 1,
+            "optional": true,
+            "additionalParams": true,
+            "id": "chatOpenAI_0-input-timeout-number"
+          },
+          {
+            "label": "BasePath",
+            "name": "basepath",
+            "type": "string",
+            "optional": true,
+            "additionalParams": true,
+            "id": "chatOpenAI_0-input-basepath-string"
+          },
+          {
+            "label": "BaseOptions",
+            "name": "baseOptions",
+            "type": "json",
+            "optional": true,
+            "additionalParams": true,
+            "id": "chatOpenAI_0-input-baseOptions-json"
+          }
+        ],
+        "inputAnchors": [
+          {
+            "label": "Cache",
+            "name": "cache",
+            "type": "BaseCache",
+            "optional": true,
+            "id": "chatOpenAI_0-input-cache-BaseCache"
+          }
+        ],
+        "inputs": {
+          "cache": "",
+          "modelName": "gpt-3.5-turbo",
+          "temperature": 0.9,
+          "maxTokens": "",
+          "topP": "",
+          "frequencyPenalty": "",
+          "presencePenalty": "",
+          "timeout": "",
+          "basepath": "",
+          "baseOptions": ""
+        },
+        "outputAnchors": [
+          {
+            "id": "chatOpenAI_0-output-chatOpenAI-ChatOpenAI|BaseChatModel|BaseLanguageModel|Runnable",
+            "name": "chatOpenAI",
+            "label": "ChatOpenAI",
+            "type": "ChatOpenAI | BaseChatModel | BaseLanguageModel | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 589,
+        "y": 319
+      }
+    },
+    {
+      "width": 300,
+      "height": 460,
+      "id": "getApiChain_0",
+      "position": {
+        "x": 1046.4823529411765,
+        "y": 423.7529411764706
+      },
+      "type": "customNode",
+      "data": {
+        "id": "getApiChain_0",
+        "label": "GET API Chain",
+        "version": 1,
+        "name": "getApiChain",
+        "type": "GETApiChain",
+        "baseClasses": [
+          "GETApiChain",
+          "BaseChain",
+          "Runnable"
+        ],
+        "category": "Chains",
+        "description": "Chain to run queries against GET API",
+        "inputParams": [
+          {
+            "label": "API Documentation",
+            "name": "apiDocs",
+            "type": "string",
+            "description": "Description of how API works. Please refer to more <a target=\"_blank\" href=\"https://github.com/langchain-ai/langchain/blob/master/libs/langchain/langchain/chains/api/open_meteo_docs.py\">examples</a>",
+            "rows": 4,
+            "id": "getApiChain_0-input-apiDocs-string"
+          },
+          {
+            "label": "Headers",
+            "name": "headers",
+            "type": "json",
+            "additionalParams": true,
+            "optional": true,
+            "id": "getApiChain_0-input-headers-json"
+          },
+          {
+            "label": "URL Prompt",
+            "name": "urlPrompt",
+            "type": "string",
+            "description": "Prompt used to tell LLMs how to construct the URL. Must contains {api_docs} and {question}",
+            "default": "You are given the below API Documentation:\n{api_docs}\nUsing this documentation, generate the full API url to call for answering the user question.\nYou should build the API url in order to get a response that is as short as possible, while still getting the necessary information to answer the question. Pay attention to deliberately exclude any unnecessary pieces of data in the API call.\n\nQuestion:{question}\nAPI url:",
+            "rows": 4,
+            "additionalParams": true,
+            "id": "getApiChain_0-input-urlPrompt-string"
+          },
+          {
+            "label": "Answer Prompt",
+            "name": "ansPrompt",
+            "type": "string",
+            "description": "Prompt used to tell LLMs how to return the API response. Must contains {api_response}, {api_url}, and {question}",
+            "default": "Given this {api_response} response for {api_url}. use the given response to answer this {question}",
+            "rows": 4,
+            "additionalParams": true,
+            "id": "getApiChain_0-input-ansPrompt-string"
+          }
+        ],
+        "inputAnchors": [
+          {
+            "label": "Language Model",
+            "name": "model",
+            "type": "BaseLanguageModel",
+            "id": "getApiChain_0-input-model-BaseLanguageModel"
+          }
+        ],
+        "inputs": {
+          "model": "{{chatOpenAI_0.data.instance}}",
+          "apiDocs": "Activities\n\nGET\n\n/api/activity/\n\nGet a random event\n\nSample Query:\n\nhttp://www.boredapi.com/api/activity/\n\nResponse:\n\n{\n\t\"activity\": \"Learn Express.js\",\n\t\"accessibility\": 0.25,\n\t\"type\": \"education\",\n\t\"participants\": 1,\n\t\"price\": 0.1,\n\t\"link\": \"https://expressjs.com/\",\n\t\"key\": \"3943506\"\n} \n\nGET\n\n/api/activity?key=:key\n\nFind an activity by its key\n\nSample Query:\n\nhttp://www.boredapi.com/api/activity?key=5881028\n\nResponse:\n\n{\n\t\"activity\": \"Learn a new programming language\",\n\t\"accessibility\": 0.25,\n\t\"type\": \"education\",\n\t\"participants\": 1,\n\t\"price\": 0.1,\n\t\"key\": \"5881028\"\n}\n\nGET\n\n/api/activity?type=:type\n\nFind a random activity with a given type\n\nSample Query:\n\nhttp://www.boredapi.com/api/activity?type=recreational\n\nResponse:\n\n{\n\t\"activity\": \"Learn how to play a new sport\",\n\t\"accessibility\": 0.2,\n\t\"type\": \"recreational\",\n\t\"participants\": 1,\n\t\"price\": 0.1,\n\t\"key\": \"5808228\"\n}\n\nGET\n\n/api/activity?participants=:participants\n\nFind a random activity with a given number of participants\n\nSample Query:\n\nhttp://www.boredapi.com/api/activity?participants=1\n\nResponse:\n\n{\n\t\"activity\": \"Learn how to fold a paper crane\",\n\t\"accessibility\": 0.05,\n\t\"type\": \"education\",\n\t\"participants\": 1,\n\t\"price\": 0.1,\n\t\"key\": \"3136036\"\n}\n\nGET\n\n/api/activity?price=:price\n\nFind an activity with a specified price\n\nSample Query:\n\nhttp://www.boredapi.com/api/activity?price=0.0\n\nResponse:\n\n{\n\t\"activity\": \"Hold a yard sale\",\n\t\"accessibility\": 0.1,\n\t\"type\": \"social\",\n\t\"participants\": 1,\n\t\"price\": 0.0,\n}\n\nGET\n\n/api/activity?minprice=:minprice&maxprice=:maxprice\n\nFind an event with a specified price in an inclusively constrained range\n\nSample Query:\n\nhttp://www.boredapi.com/api/activity?minprice=0&maxprice=0.1\n\nResponse:\n\n{\n\t\"activity\": \"Teach your dog a new trick\",\n\t\"accessibility\": 0.15,\n\t\"type\": \"relaxation\",\n\t\"participants\": 1,\n\t\"price\":0.05\n}\n\nGET\n\n/api/activity?accessibility=:accessibility\n\nFind a price in an inclusively constrained range\n\nSample Query:\n\nhttp://www.boredapi.com/api/activity?accessibility=1\n\nResponse:\n\n{\n\t\"activity\": \"Take a bubble bath\",\n\t\"accessibility\": 0.1,\n\t\"type\": \"relaxation\",\n\t\"participants\": 1,\n\t\"price\": 0.15,\n}\n\nGET\n\n/api/activity?minaccessibility=:minaccessibility&maxaccessibility=:maxaccessibility\n\nFind an event with a specified accessibility in an inclusively constrained range\n\nSample Query:\n\nhttp://www.boredapi.com/api/activity?minaccessibility=0&maxaccessibility=0.1\n\nResponse:\n\n{\n\t\"activity\":\"Learn a new recipe\",\n\t\"accessibility\":0.05,\n\t\"type\":\"cooking\",\n\t\"participants\":1,\n\t\"price\":0\n}\n\nactivity\n\nDescription of the queried activity\n\n\naccessibility\n\nA factor describing how possible an event is to do with zero being the most accessible\n\n[0.0, 1.0]\n\ntype\n\nType of the activity\n\n[\"education\", \"recreational\", \"social\", \"diy\", \"charity\", \"cooking\", \"relaxation\", \"music\", \"busywork\"]\n\nparticipants\n\nThe number of people that this activity could involve\n\n[0, n]\n\nprice\n\nA factor describing the cost of the event with zero being free\n\n[0, 1]\n\nkey\n\nA unique numeric id\n\n[1000000, 9999999]",
+          "headers": "",
+          "urlPrompt": "You are given the below API Documentation:\n{api_docs}\nUsing this documentation, generate the full API url to call for answering the user question.\nYou should build the API url in order to get a response that is as short as possible, while still getting the necessary information to answer the question. Pay attention to deliberately exclude any unnecessary pieces of data in the API call.\n\nQuestion:{question}\nAPI url:",
+          "ansPrompt": "Given this {api_response} response for {api_url}. use the given response to answer this {question}"
+        },
+        "outputAnchors": [
+          {
+            "id": "getApiChain_0-output-getApiChain-GETApiChain|BaseChain|Runnable",
+            "name": "getApiChain",
+            "label": "GETApiChain",
+            "type": "GETApiChain | BaseChain | Runnable"
+          }
+        ],
+        "outputs": {},
+        "selected": false
+      },
+      "selected": false,
+      "positionAbsolute": {
+        "x": 1046.4823529411765,
+        "y": 423.7529411764706
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "chatOpenAI_0",
+      "sourceHandle": "chatOpenAI_0-output-chatOpenAI-ChatOpenAI|BaseChatModel|BaseLanguageModel|Runnable",
+      "target": "getApiChain_0",
+      "targetHandle": "getApiChain_0-input-model-BaseLanguageModel",
+      "type": "buttonedge",
+      "id": "chatOpenAI_0-chatOpenAI_0-output-chatOpenAI-ChatOpenAI|BaseChatModel|BaseLanguageModel|Runnable-getApiChain_0-getApiChain_0-input-model-BaseLanguageModel"
+    }
+  ]
+}
