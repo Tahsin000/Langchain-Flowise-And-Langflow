@@ -27,4 +27,8 @@
 
 ## 16. Retrieval Chain
 
+### Chunk 
+Chunk is size of the document character
+
 ![Alt text](image-7.png)
+
